@@ -1,0 +1,87 @@
+1.数组去重：
+	for循环嵌套，set()//ES6,indexof(),includes(),sort(),递归
+
+2.样式只影响自身：在style标签中加 'scoped' （局部样式）
+
+3.js中什么时候不写分号会出错：    1.压缩文件时
+			2.return时不能换行，否则会在return后自动添加分号
+			3.函数前后需要加分号
+			。。。
+4.适配移动端：
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+、	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+5.charles 爬取手机应用的信息
+
+
+6.跨域：nodejs/jsonp/cors（）/服务器代理
+	nodejs：
+		express模块
+		var express = require("express");//路由
+		var request = require("request");//服务器
+		var app = express();
+		app.get("路由"，function(req,res)
+		{
+		//res.append("Access-Control-Allow-Origin","*")解决跨域（Ajax跨域 CORS）
+		request('http://接口'，function(err,response,body){
+		})
+		res.send('');
+		}
+		app.listen(9999)
+
+把前端代码打包后的dist文件夹放入后端的public文件夹中，形成同源，不会跨域
+
+jsonp:后端  res.jsonp
+         前端  
+
+发布：先发后端再发前端
+
+websoket:无跨域概念；
+
+cookies		//可以设置时效性
+Local Storage	//永久存储（相当于储存）
+Session Storage	//页面关闭就消除数据
+
+7.如何判断是否在登录状态
+
+8.axios/ajax:
+	npm install axios
+	import axios from "axios"
+	axios.get("路径"){
+	
+	}
+
+9.webpack:
+	全局安装：npm install webpack webpack-cli -g
+	局部安装：npm install webpack
+配置文件：
+	webpack.config.js
+	1，打包工具
+	2，转格式，转文件
+	3，代替gulp
+	缺点：打包完成后内存会变大
+
+10.module exports = {}与export default {}区别
+配合     require   		import    使用
+
+在npm i 安装依赖的时候，会遇到这个Error: EBUSY: resource busy or locked, symlink....的问题。解决的 办法就是关掉电脑的杀毒软件，比如360 等等。
+
+11.vuex弊端：
+
+12.v-if与v-show区别
+	v-if显示隐藏是将dom元素整个添加或删除，而v-show隐藏则是为该元素添加css--display:none，dom元素还在
+
+13.数据驱动的原理：set,get
+
+14.js同源策略：安全性，
+
+15.服务器代理：
+
+
+16.服务器配置：
+	IP：39.98.72.203			我的：	IP：39.108.103.28（公）/172.16.28.104（内）
+	用户名：administrator			用户名：root
+	密码：XJR123yjl				密码：CZQ20140323czq
+
+17.全局引入axios:
+	vue

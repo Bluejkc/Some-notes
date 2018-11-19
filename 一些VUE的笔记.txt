@@ -1,0 +1,77 @@
+	安装vue模块
+		npm i vue
+	
+	安装脚手架（全局）
+		npm install -g @vue/cli（如果报Unexpected end of JSON input while parsing near 'xxx'错误则可能是nodejs与npm版本不合适，输入npm -g i npm@4 把npm版本降到4版即可）
+		查询vue版本 vue -V
+	
+	在一个文件夹下，打开命令行，在里面输入以下命令，来去初始化一个vue的项目
+		vue create 项目名字(英文，比如：vue-project)
+	
+	如果安装成功则有：
+		cd vue-project
+		npm run serve
+
+	安装vue路由模块
+	cnpm install vue-router （--save-dev）保存依赖
+	使用路由：
+		import VueRouter from 'vue-router'
+		Vue.use(VueRouter)
+	
+	安装express脚手架
+		cnpm install -g express-generator@4
+		创建express项目
+			express 项目路径
+		=>cd cms
+		=>npm install  (依赖)
+		=>npm run start //运行
+		:在生成的文件夹中的路由文件夹routes下创建一个新的路由
+		再把它引入（import）到app.js中并使用(use)它
+			
+
+如果你有一份package.json文件里面有你需要的依赖（模块）你的项目移到其他电脑中时不需一个个模块重新安装，只需cmd   （npm install）
+
+
+	组件：
+	     <div id="app">		1 &  2
+		<xxx></xxx>	==>	<h1>标题</h1>
+	     </div>
+	     <div id="app2">		1
+		<xxx></xxx>	==>	<h1>标题</h1>
+	     </div>
+	     1.全局组件：
+
+		Vue component('xxx',{
+			//模板替换//
+			template:'<h1>标题</h1>'})
+		ar vue = new Vue({
+		      el: '#app'
+		})
+		ar vue = new Vue({
+		      el: '#app2'
+		})
+	    2.局部组件：
+		var vue = new Vue({
+		      el: '#app',
+		      components:{
+		       	'xxx' :{
+  			     template : '<h1>标题</h1>'
+			}
+		      }
+		})
+			
+
+模块中引入css:@import url()
+
+
+v-if与v-show区别
+	v-if显示隐藏是将dom元素整个添加或删除，而v-show隐藏则是为该元素添加css--display:none，dom元素还在
+
+keep-alive：作用
+	是包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们
+
+简述vue-cl脚手架中dev.env.js和prod.envjs 文件的作用
+	dev.env.js文件是开发环境的变量
+	prod.env.js文件是生产环境的变量
+
+路由是/时，加一句代码，默认打开某个页面

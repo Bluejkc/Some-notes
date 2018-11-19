@@ -1,0 +1,9 @@
+component构造函数与pages不能混用
+
+背景图片插入需要background-image: 需要xxx(服务器图片)
+	          background:  需要base64转码的图片
+
+Vue创建微信小程序
+	：vue init mpvue/mpvue-quickstart weixin
+	npm run dev
+

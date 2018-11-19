@@ -1,0 +1,23 @@
+1.安装生成器
+$ npm install express-generator -g
+
+ 
+
+ 
+
+2. 创建名称为APP的应用：
+$ express app
+
+ 
+
+3.安装依赖包
+$ cd  app  进入app目录
+
+$ npm run install 安装依赖包
+
+  　生成 package.json 文件
+
+ 
+
+4、启动应用
+$ npm start

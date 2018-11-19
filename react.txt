@@ -1,0 +1,71 @@
+react
+一.引入react
+	1.script引入
+	2.npm 
+		脚手架下载
+
+			使用npm下载create-react-app运行如下命令：
+				
+
+npm install -g create-react-app
+
+			国内npm一般下载比较慢或者是常出现下载失败的情况，我们可以指定下载的仓库：
+				
+
+npm install -g create-react-app --registry https://registry.npm.taobao.org
+
+			或者直接设置npm的默认仓库：
+
+
+				npm config set registry https://registry.npm.taobao.org 
+			
+
+初始化react项目
+进入到项目目录下使用如下命令：
+				
+
+create-react-app first-app(项目名称)
+
+ 静待几分钟，好了。我们的react项目已经生成了。
+				
+
+cd first-app
+
+				npm start 
+
+启动项目，浏览器已经打开了我们的第一个react项目。
+				
+
+npm run build //webpack编译打包项目
+			生成webpack的配置文件：
+				npm run eject
+二.应用	
+	<div id="demo"></div>
+	引入react cdn文件
+	<script type="text/babel">
+	var data = { 
+		name:"xxx"	
+	}
+	ReactDOM.render(
+		<div name={data.name}>{data.name}</div>
+		document.querySelector("#")
+	)
+	</script>
+	1.支持算法运算
+	2.支持函数
+	3.{ }支持放函数，return的值，就是需要渲染的值
+	4.绑定事件：运用 onClick（事件名）={函数}
+三.JSX
+	jsx（单向数据绑定）是用一个大括号实现数据绑定，区别于vue（双向数据绑定）的两个大括号
+	绑定属性：
+		<div name={data.name}></div>
+
+路由：
+	npm install react-router-dom
+	引入路由:
+		import {BrowserRouter as Router，Route,Link} from "react-router-dom"
+	定义组件：
+	         <Router>
+		<Link to={/xxx}></Link>
+		<Route path="/" exact component={index} />
+	         </Router>
